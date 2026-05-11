@@ -81,7 +81,7 @@ function App() {
 
   if(!username){
     return(
-    <main className="h-screen w-full bg-gray-950 flex gap-4 p-4 items-center justify-center">
+    <main className="h-screen w-full bg-gray-850 flex gap-4 p-4 items-center justify-center">
      <form onSubmit={handleJoin} className='flex flex-col gap-4'>
       <input type="text" className='p-2 rounded-lg bg-gray-800 text-white' placeholder='enter user name' name='username'/>
       <button type='submit' className='p-2 rounded-lg bg-amber-50 text-gray-950 font-bold'>Join</button>
@@ -91,17 +91,18 @@ function App() {
 }
 
   return (
-    <main className="h-screen w-full bg-gray-950 flex gap-4 p-4">
-      <aside className='h-full w-1/4 bg-amber-50 rounded-lg'>
-       <h2 className='text-2xl font-bold p-4 border-b border-gray-300'>Users</h2>
+    <main className="h-screen w-full bg-gray-400 flex gap-4 p-4">
+      <aside className='h-full w-1/4 bg-neutral-800 rounded-lg'>
+       <h2 className='text-2xl font-bold p-4 border-b border-gray-300 text-white'>Users</h2>
        <ul className='p-4 space-y-2'>
         {users.map((user,index)=>(
-            <li key={index} className='p-2 rounded-lg bg-amber-100'>{user.username}</li>
+            <li key={index} className='p-2 rounded-lg bg-neutral-900 text-white flex items-center justify-center capitalize'>{user.username}</li>
         )) }
        </ul>
       </aside>
-      <section className='h-full w-3/4 bg-neutral-800 rounded-lg overflow-hidden'>
+      <section className='h-full w-3/4 bg-white rounded-lg overflow-hidden'>
       <Editor
+      className='center p-3'
         height="100%"
         defaultLanguage="javascript"
         defaultValue="// some comment"

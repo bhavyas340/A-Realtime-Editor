@@ -1,1 +1,10 @@
 @import 'tailwindcss';
+
+
+li:hover{
+    background-color: rgb(38, 38, 38);
+    color:white;
+    cursor:pointer;
+    font-size: 18px;
+    transition: ease-in-out 0.3s;
+}
